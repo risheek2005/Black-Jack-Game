@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blackjack - Web Casino Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="casino-table">
+        <div class="game-header">
+            <h1>🃏 Blackjack 21 🃏</h1>
+            <div class="game-status" id="gameStatus">Welcome! Click "New Game" to start playing</div>
+        </div>
+
+        <div class="game-area">
+            <!-- Dealer Section -->
+            <div class="dealer-section">
+                <div class="section-header">
+                    <h2>Dealer</h2>
+                    <div class="score-display">
+                        <span class="score-label">Score:</span>
+                        <span class="score-value" id="dealerScore">-</span>
+                    </div>
+                </div>
+                <div class="cards-container" id="dealerCards">
+                    <!-- Dealer cards will be added here -->
+                </div>
+            </div>
+
+            <!-- Player Section -->
+            <div class="player-section">
+                <div class="section-header">
+                    <h2>Your Hand</h2>
+                    <div class="score-display">
+                        <span class="score-label">Score:</span>
+                        <span class="score-value" id="playerScore">-</span>
+                    </div>
+                </div>
+                <div class="cards-container" id="playerCards">
+                    <!-- Player cards will be added here -->
+                </div>
+            </div>
+        </div>
+
+        <!-- Game Controls -->
+        <div class="game-controls">
+            <button class="btn btn--primary btn--lg" id="newGameBtn">New Game</button>
+            <button class="btn btn--secondary btn--lg hidden" id="hitBtn">Hit</button>
+            <button class="btn btn--outline btn--lg hidden" id="standBtn">Stand</button>
+        </div>
+
+        <!-- Game Result Modal -->
+        <div class="modal hidden" id="resultModal">
+            <div class="modal-content">
+                <h3 id="resultTitle">Game Over</h3>
+                <p id="resultMessage">Result message will appear here</p>
+                <div class="modal-actions">
+                    <button class="btn btn--primary" id="playAgainBtn">Play Again</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
